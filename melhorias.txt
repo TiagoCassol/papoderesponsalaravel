@@ -1,0 +1,16 @@
+*verificar se o multiplicador realizou a visita
+*relatório de pendencias
+*cada multiplicador é associado a uma região
+*o administrador pode registrar um multiplicador a outro região
+*filtros
+*alerta para quantidade minima de palestras
+*feedback dos solicitantes para criar estatiscas
+*quando a solicitação for atendida encaminhar para o solicitante a pesquisa de feedbak e não liberar um sistema até enviar um feedback
+*mandar email de alerta apos X dias sem resposta da pesquisa
+*quando surgir uma nova solicitação disparar email para os multiplicadores da região
+*logs de execução de sistema
+*as solicitações atendem diferentes tipos de palestras predefinadas
+*multiplicador tem que possuir uma lotação(delegacia)
+*bug do multiplicador vir ativo
+*bug de vir solicitação aceita
+*dashboard
