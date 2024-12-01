@@ -36,14 +36,19 @@ header {
 }
 
 .logo {
-    width: 110px;
+
     height: auto;
+    max-width: 100%; /* Impede que a imagem ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 100px; /* Define uma largura específica */
+    margin: 10px auto; /* Centraliza a imagem e adiciona espaçamento */
+    display: block; /* Garante que seja tratada como bloco para alinhamento */
 }
 
 
 .nav-center {
     font-weight: bolder;
-    font-size: 115%;
+    font-size: 85%;
     flex: 1; /* Ocupa o espaço disponível */
     display: flex;
     align-items: center;
@@ -79,6 +84,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 20px;
 }
 
 .nav-right a {
@@ -227,6 +233,16 @@ footer {
     padding: 20px;
     width: 100%;
 }
+
+
+.logo-policia {
+    max-width: 100%; /* Impede que a imagem ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 200px; /* Define uma largura específica */
+    margin: 10px auto; /* Centraliza a imagem e adiciona espaçamento */
+    display: block; /* Garante que seja tratada como bloco para alinhamento */
+}
+
 
 @media (max-width: 768px) {
     .nav-center ul {

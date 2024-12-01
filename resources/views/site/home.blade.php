@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papo de Responsa</title>
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> --}}
     <!-- Importar a fonte Merriweather do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <!-- Link para o arquivo CSS externo -->
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/home.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="/images/icon2.png">
 </head>
@@ -15,7 +16,7 @@
     <header>
         <nav class="nav-left">
 
-        <img src="images/policia_civil2.png" alt="Logo Papo de Responsa" class="">
+        <img src="images/policia_civil2.png" alt="Logo Papo de Responsa" class="logo-policia">
         </nav>
         <nav class="nav-center">
 
@@ -91,6 +92,15 @@
             <span class="material-icons">keyboard_arrow_up</span>
         </a>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script> /* Dropdown */
+        var elemDrop = document.querySelectorAll('.dropdown-trigger');
+        var instanceDrop = M.Dropdown.init(elemDrop, {
+            coverTrigger: false,
+            constrainWidth: false
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
