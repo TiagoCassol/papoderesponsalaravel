@@ -10,7 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class Multiplicador extends Authenticatable
+class Solicitante extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
@@ -23,16 +23,20 @@ class Multiplicador extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'nome_multiplicador',
-        'email_multiplicador',
-        'senha_multiplicador',
-        'matricula',
-        'cpf_multiplicador',
-        'endereco_multiplicador',
-        'status_multiplicador',
-        'nivel_hierarquia',
+        protected $fillable = [
+        'cnpj',
+        'email_solicitante',
+        'senha_solicitante',
+        'responsavel',
+        'tipo_escola',
+        'endereco_solicitante',
+        'nome_instituicao',
+        'esfera',
     ];
+
+
+    protected $table = 'solicitantes';
+    protected $primaryKey = 'id_solicitante';
 
     /**
      * The attributes that should be hidden for serialization.
@@ -45,10 +49,6 @@ class Multiplicador extends Authenticatable
         'two_factor_recovery_codes',
         'two_factor_secret',
     ];
-
-
-    protected $table = 'multiplicadors';
-    protected $primaryKey = 'id_multiplicador';
 
     /**
      * The attributes that should be cast.
@@ -70,6 +70,6 @@ class Multiplicador extends Authenticatable
 
     public function getAuthPassword()
     {
-        return $this->senha_multiplicador;
+        return $this->senha_solicitante;
     }
 }

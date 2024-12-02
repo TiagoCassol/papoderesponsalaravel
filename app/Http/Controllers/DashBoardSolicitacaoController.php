@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Multiplicador;
+use App\Models\Solicitacao;
 use DB;
 
-class DashBoardController extends Controller
+class DashBoardSolicitacaoController extends Controller
 {
     public function index()
     {
         // Busca os dados dos multiplicadores no banco
-        $multiplicadores = Multiplicador::all();
+        $solicitacoes = Solicitacao::all();
 
         // Retorna a view com os dados
-        return view('admin.dashboard', compact('multiplicadores'));
+        return view('admin.dashboardsolicitacao', compact('solicitacoes'));
     }
 }

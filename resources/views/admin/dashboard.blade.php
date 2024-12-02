@@ -1,53 +1,42 @@
+@extends('admin.layout')
 
-  <div class="row container">
-    <section class="info">
+@section('title', 'Dashboard')
 
-      <div class="col s12 m4">
-      <article class="bg-gradient-green card z-depth-4 ">
-        <i class="material-icons">paid</i>
-        <p>Faturamento</p>
-        <h3>R$ 123,00</h3>
-      </article>
-      </div>
+@section('content')
+    
 
-      <div class="col s12 m4">
-        <article class="bg-gradient-blue card z-depth-4 ">
-          <i class="material-icons">face</i>
-          <p>Usuários</p>
- 
-        </article>
-        </div>
+<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 
-        <div class="col s12 m4">
-          <article class="bg-gradient-orange card z-depth-4 ">
-            <i class="material-icons">shopping_cart</i>
-            <p>Pedidos este mês</p>
-            <h3>0</h3>
-          </article>
-          </div>
-
-    </section>
-  </div>
-
-
-      <div class="row container ">
-          <section class="graficos col s12 m6" >
-            <div class="grafico card z-depth-4">
-                <h5 class="center"> Aquisição de usuários</h5>
-                <canvas id="myChart" width="400" height="200"></canvas>
-            </div>
-          </section>
-
-          <section class="graficos col s12 m6">
-              <div class="grafico card z-depth-4">
-                  <h5 class="center"> Produtos </h5>
-              <canvas id="myChart2" width="400" height="200"></canvas>
-          </div>
-         </section>
-      </div>
-
-
-
-
-      </div>
-
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>CPF</th>
+                <th>Status</th>
+                <th>Cargo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($multiplicadores as $multiplicador)
+                <tr>
+                    <td>{{ $multiplicador->id_multiplicador }}</td>
+                    <td>{{ $multiplicador->nome_multiplicador }}</td>
+                    <td>{{ $multiplicador->email_multiplicador }}</td>
+                    <td>{{ $multiplicador->cpf_multiplicador }}</td>
+                    <td>{{ $multiplicador->status_multiplicador }}</td>
+                    <td>{{ $multiplicador->nivel_hierarquia }}</td>
+                    <td>
+                        <!-- Botões ou links de ação -->
+                        {{-- <a href="{{ route('multiplicadores.edit', $multiplicador->id_multiplicador) }}">Editar</a>
+                        <a href="{{ route('multiplicadores.delete', $multiplicador->id_multiplicador) }}">Excluir</a> --}}
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endsection
