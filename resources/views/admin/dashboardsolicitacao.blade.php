@@ -24,8 +24,8 @@
             @foreach($solicitacoes as $solicitacao)
                 <tr>
                     <td>{{ $solicitacao->id_solicitacao }}</td>
-                    <td>{{ $solicitacao->solicitante->nome ?? 'N/A' }}</td>
-                    <td>{{ $solicitacao->multiplicador->nome ?? 'N/A' }}</td>
+                    <td>{{ $solicitacao->solicitante->nome_instituicao ?? 'N/A' }}</td>
+                    <td>{{ $solicitacao->multiplicador->nome_multiplicador ?? 'N/A' }}</td>
                     <td>{{ $solicitacao->descricao }}</td>
                     <td>{{ date('d/m/Y', strtotime($solicitacao->data_criacao)) }}</td>
                     <td>{{ $solicitacao->status_solicitacao }}</td>
