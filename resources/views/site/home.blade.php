@@ -31,7 +31,7 @@
 
         <nav class="nav-right">
             <img src="images/logo.png" alt="Logo Papo de Responsa" class="logo">
-            <a href="login.php" class="login">Login</a>
+            <a href="{{route('login.form')}}" class="login">Login</a>
         </nav>
     </header>
     <main>

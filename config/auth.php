@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+            'multiplicador' => [
+            'driver' => 'session',
+            'provider' => 'multiplicadors',
+        ],
     ],
 
     /*
@@ -65,10 +70,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'multiplicadors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Multiplicador::class, // Crie este modelo para a tabela multiplicadors
+        ],
     ],
 
     /*
@@ -98,6 +103,8 @@ return [
             'throttle' => 60,
         ],
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------

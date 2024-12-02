@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashBoardController;
 
 
 /*
@@ -17,3 +19,7 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/',[SiteController::class,'index'])->name('site.index');
 
+Route::view('/login','login.form')->name('login.form');
+Route::post('/auth',[LoginController::class,'auth'])->name('login.auth');
+
+Route::get('/admin/dashboard', [DashBoardController::class,'index'])->name('admin.dashboard');

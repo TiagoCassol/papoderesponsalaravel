@@ -243,6 +243,67 @@ footer {
     display: block; /* Garante que seja tratada como bloco para alinhamento */
 }
 
+#login {
+    display: flex; /* Posiciona os elementos lado a lado */
+    justify-content: center; /* Centraliza no eixo horizontal */
+    gap: 20px; /* Espaçamento entre as caixas */
+    margin: 20px; /* Margem geral para o contêiner */
+}
+
+.caixa {
+    background-color: #f4f4f4; /* Fundo claro */
+    border: 1px solid #ccc; /* Borda discreta */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: 300px; /* Largura fixa */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.caixa h1 {
+    font-size: 18px; /* Tamanho da fonte do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o título */
+}
+
+.caixa input[type="email"],
+.caixa input[type="password"],
+.caixa input[type="submit"],
+.caixa button {
+    width: 100%; /* Preenche toda a largura da caixa */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+    border: 1px solid #ccc; /* Borda discreta */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.caixa input[type="submit"],
+.caixa button {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor de "clique" */
+    transition: background-color 0.3s ease; /* Animação para hover */
+}
+
+.caixa input[type="submit"]:hover,
+.caixa button:hover {
+    background-color: #45a049; /* Cor do botão no hover */
+}
+
+.caixa a {
+    display: block; /* Exibe os links como blocos */
+    text-align: center; /* Centraliza o texto dos links */
+    color: #007BFF; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    margin-top: 5px; /* Espaçamento entre os links */
+}
+
+.caixa a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+
 
 @media (max-width: 768px) {
     .nav-center ul {
